@@ -1,0 +1,14 @@
+{
+  "id": "Indonesia",
+  "name": "Faridhatul Zikri",
+  "hobbies": [
+    "Coding",
+    "Reading",
+    "Traveling"
+  ],
+  "address": {
+    "street": "Jl. Merdeka",
+    "city": "Jakarta",
+    "country": "Indonesia"
+  }
+}

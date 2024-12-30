@@ -1,0 +1,33 @@
+package enigma_camp.json;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import enigma_camp.json.entity.Address;
+import enigma_camp.json.entity.Person;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+public class ObjectToJson {
+
+    @Test
+    void createJsonFromObject() throws JsonProcessingException {
+        Person person = new Person();
+
+        person.setId("Indonesia");
+        person.setName("Faridhatul Zikri");
+        person.setHobbies(List.of("Coding", "Reading", "Traveling"));
+
+        Address address = new Address();
+        address.setStreet("Jalan Belum Jadi");
+        address.setCity("Jakarta");
+        address.setCountry("Indonesia");
+        person.setAddress(address);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(person);
+
+        System.out.println(json);
+
+    }
+}
